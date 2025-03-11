@@ -69,8 +69,7 @@ gallery.insertAdjacentHTML('beforeend', createMarkup(images));
 gallery.addEventListener('click', handleClick);
 
 function createMarkup(arr) {
-  return arr
-    .map(
+  return arr.map(
       item => `
     <li class="gallery-item">
       <a class="gallery-link" href="${item.original}">
@@ -83,8 +82,7 @@ function createMarkup(arr) {
       </a>
     </li>
   `
-    )
-    .join('');
+    ).join('');
 }
 
 function handleClick(event) {
@@ -107,5 +105,6 @@ function handleClick(event) {
           />
       </div>
     `);
+  
   instance.show();
 }
